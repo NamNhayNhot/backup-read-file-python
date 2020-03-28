@@ -15,7 +15,7 @@ def matric_package(inFile, outFile):
     for line_app in app:
         arr_app.append(line_app.strip())
     # print(len(arr_app))
-    A = np.zeros((count_api, count_app) )
+    A = np.zeros((count_api, count_app),dtype=int )
     # print A
     for x in range(len(arr_api)):
         for y in range(len(arr_app)):
@@ -26,10 +26,11 @@ def matric_package(inFile, outFile):
                 # print(x, y)
                 # print A[x][y]
     # print A
-    outFile. write(str(A))
-    # for x in range(len(arr_api)):
-    #     for y in range(len(arr_app)):
-    #         print A[x][y]
+    # outFile. write(str(A))
+    for x in range(len(arr_api)):
+        for y in range(len(arr_app)):
+            outFile.write (str(A[x][y])+"\t")
+        outFile.write("\n")
 pass
 inFile = "API-app.txt"
 resultFile = open("matric-app.txt", "w")

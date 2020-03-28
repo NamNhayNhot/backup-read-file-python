@@ -8,7 +8,7 @@ def matric_package(inFile, outFile):
     arr = []
     for line in f:
         arr.append(line)
-    A = np.eye(count)
+    A = np.eye(count,dtype=int)
     # print(A)
     for x in range(len(arr)):
         for y in range(len(arr)):
@@ -16,7 +16,10 @@ def matric_package(inFile, outFile):
                 A[x][y] = 1
                 # print(x, y)
     # print(A)
-    outFile.write(str(A))
+    for x in range(len(arr)):
+        for y in range(len(arr)):
+            outFile.write(str(A[x][y]) + "\t")
+        outFile.write("\n")
 pass
 inFile = "API-package.txt"
 resultFile = open("matric-package.txt", "w")
@@ -26,5 +29,3 @@ matric_package(inFile, resultFile)
 resultFile.close()
 
 print('done!')
-
-print()

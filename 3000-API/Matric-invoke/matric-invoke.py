@@ -8,12 +8,16 @@ def matric_invoke(inFile, outFile):
     arr = []
     for line in f:
         arr.append(line)
-    A = np.eye(count)
+    A = np.eye(count,dtype=int)
     for x in range(len(arr)):
         for y in range(len(arr)):
             if arr[x][0:12] == arr[y][0:12]:
                 A[x][y] =1
-    outFile.write(str(A))
+                # print (x,y)
+    for x in range(len(arr)):
+        for y in range(len(arr)):
+            outFile.write(str(A[x][y]) + "\t")
+        outFile.write("\n")
     # print(A)
 
 pass

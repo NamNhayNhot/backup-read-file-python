@@ -9,13 +9,16 @@ def matric_invoke(inFile, outFile):
     arr = []
     for line in f:
         arr.append(line)
-    A = np.eye(count)
+    A = np.eye(count,dtype=int)
     # print(A)
     for x in range(len(arr)):
         for y in range(len(arr)):
             if arr[x][:arr[x].find('invoke')] == arr[y][:arr[y].find('invoke')]:
                 A[x][y] = 1
-    outFile.write(str(A))
+    for x in range(len(arr)):
+        for y in range(len(arr)):
+            outFile.write(str(A[x][y]) + "\t")
+        outFile.write("\n")
 pass
 inFile = 'read-line-smali-block.txt'
 resultFile = open("matric-block.txt", "w")

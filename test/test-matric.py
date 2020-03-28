@@ -1,3 +1,4 @@
+
 import os
 import re
 import sys
@@ -30,6 +31,7 @@ def matric_package(inFile, outFile):
     for x in range(len(arr_api)):
         for y in range(len(arr_app)):
             outFile.write(str(A[x][y])+"\t")
+        outFile.write("\n")
 pass
 inFile = "../1000-API/Matric-app/API-app.txt"
 resultFile = open("matric-test.txt", "w")

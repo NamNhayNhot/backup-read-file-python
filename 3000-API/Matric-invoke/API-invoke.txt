@@ -223,7 +223,7 @@
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-    invoke-direct    {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
