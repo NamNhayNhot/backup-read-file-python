@@ -9,15 +9,9 @@ def readAllFile(currentPath, outFile):
             if ".smali" in fileName:
                 f = open(fileName, "r")
                 fileContent = f.readlines()
-                # outFile.write("\n------>" + fileName+": \n")
                 for x in fileContent:
                     if x.find('.method') != -1 or x.find('    invoke') != -1:
-                       # if x not in thisset:
                        arr.append(x)
-                       # arr.append(fileName[fileName.find('c/'):fileName.find('/smali')] + x)
-                       # arr.append(x[x.find("L"):x.find("(")] + "\n")
-                        # thisset.add(x[x.find("L"):x.find("(")] + "\n")
-                        # thisset.add(x[x.find("->"):x.find("(")] + "\n")
         else:
             if (os.path.isdir(fileName)):
                 readAllFile(fileName, outFile)

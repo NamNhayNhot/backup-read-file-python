@@ -11,13 +11,8 @@ def readAllFile(currentPath, outFile):
                 fileContent = f.readlines()
                 # outFile.write("\n------>" + fileName+": \n")
                 for x in fileContent:
-                   if "    invoke"  in x:
-                       # if x not in thisset:
+                   if "    invoke" in x:
                        arr.append(x)
-                       # arr.append(fileName[fileName.find('c/'):fileName.find('/smali')] + x)
-                       # arr.append(x[x.find("L"):x.find("(")] + "\n")
-                        # thisset.add(x[x.find("L"):x.find("(")] + "\n")
-                        # thisset.add(x[x.find("->"):x.find("(")] + "\n")
         else:
             if (os.path.isdir(fileName)):
                 readAllFile(fileName, outFile)

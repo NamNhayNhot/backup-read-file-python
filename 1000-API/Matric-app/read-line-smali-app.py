@@ -12,8 +12,6 @@ def readAllFile(currentPath, outFile):
                 # outFile.write("\n------>" + fileName+": \n")
                 for x in fileContent:
                    if "    invoke"  in x:
-                       # if x not in thisset:
-                       # arr.append(x)
                        arr.append(fileName[fileName.find('s/'):fileName.find('/smali')] + x)
 
         else:

@@ -11,9 +11,8 @@ def matric_invoke(inFile, outFile):
     A = np.eye(count,dtype=int)
     for x in range(len(arr)):
         for y in range(len(arr)):
-            if arr[x][0:12] == arr[y][0:12]:
+            if arr[x][0:arr[x].find('{')] == arr[y][0:arr[y].find('{')]:
                 A[x][y] =1
-
     for x in range(len(arr)):
         for y in range(len(arr)):
             outFile.write(str(A[x][y]) + "\t")
