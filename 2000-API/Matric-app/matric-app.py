@@ -18,7 +18,7 @@ def matric_package(inFile, outFile):
     A = np.zeros( (count_api, count_app),dtype=int )
     for x in range(len(arr_api)):
         for y in range(len(arr_app)):
-            if arr_api[x][2:arr_api[x].find('    invoke')] == arr_app[y]:
+            if arr_api[x][2:arr_api[x].find('    invoke')] == arr_app[y][4:]:
                 A[x][y] = 1
                 # print(arr_api[x][2:arr_api[x].find('invoke')])
                 # print(arr_app[y])
