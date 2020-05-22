@@ -23,8 +23,10 @@ resultFile = open("API-app.txt", "w")
 automatic = open("../Automatic reverse translation/Automatic-reverse-translation.txt", "r")
 path = ""
 for line in automatic:
-    # path ="/home/dieuthuy/Khoa-luan-tot-nghiep/dich-nguoc/"+line.strip()+"/smali"
-    path ="/home/dieuthuy/khoaluantotnghiep/malware/malware_samples/"+line.strip()+"/smali"
+    if line.startswith('1'):
+        path ="/home/dieuthuy/khoaluantotnghiep/malware/malware_samples/"+line.strip()+"/smali"
+    else:
+        path ="/home/dieuthuy/khoaluantotnghiep/benign/benign_samples/"+line.strip()+"/smali"
     readAllFile(path, resultFile)
 
 
